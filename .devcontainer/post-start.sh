@@ -24,6 +24,6 @@ argocd login \
 
 echo "Argo CD admin password: ${ARGOCD_ADMIN_PASSWORD}"
 
-bash .hack/update-repo-for-workshop.sh
+bash .devcontainer/update-repo-for-workshop.sh
 
 echo "$(date): Finished post-start.sh" >> ~/.status.log
