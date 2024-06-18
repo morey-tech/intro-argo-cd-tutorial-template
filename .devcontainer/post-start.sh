@@ -13,7 +13,7 @@ kubectl wait deployment -n argocd --all --for=condition=Available=True --timeout
 ARGOCD_ADMIN_PASSWORD="$(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)"
 echo "${ARGOCD_ADMIN_PASSWORD}" > ~/argo-cd-admin-password.txt
 
-kubectl apply -f app-of-apps.yaml 2>&1 | tee -a ~/.status.log
+# kubectl apply -f app-of-apps.yaml 2>&1 | tee -a ~/.status.log
 
 argocd login \
   "localhost:31443" \
